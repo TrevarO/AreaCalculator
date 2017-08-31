@@ -1,0 +1,96 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int userentry=0;
+    double radius=0;
+    double RectLength=0;
+    double RectWidth=0;
+    double TriBase=0;
+    double TriHeight=0;
+
+// ask the user to enter number 1-4 1= circle 2 = rectangle 3 =triangle 4 = quit
+
+cout<< "enter 1 for the area of a circle: \nEnter 2 for the area of a rectangle: \nEnter 3 for the area of a triangle: \nEnter 4 to quit:" << endl;
+cin>> userentry;
+
+if(userentry == 1)
+    {
+cout<<"Enter the radius of the circle: "<<endl;
+cin>>radius;
+if(radius<0)
+        {
+    cout<<"radius can only be positive"<<endl;
+    return 0;
+        }
+        else
+            {
+    cout<<"The radius is "<< radius * radius * 3.14159<< endl;
+            }
+    }
+else if(userentry == 2)
+    {
+     cout<<"Enter the Length of the rectangle: "<<endl;
+     cin>>RectLength;
+     if(RectLength<0)
+     {
+         cout<<"The length must be greater than 0";
+         return 0;
+     }
+
+     else
+
+     {
+     cout<<"Enter the Width of the rectangle"<<endl;
+     cin>>RectWidth;
+     if(RectWidth<0)
+     {
+         cout<<"The Length must be greater than 0";
+         return 0;
+     }
+     else
+     {
+         cout<<"The area of the rectangle is "<< RectWidth * RectLength<< endl;
+     }
+     }
+    }
+else if(userentry == 3)
+{
+    cout<<"Enter the Height of the triangle: "<<endl;
+    cin>>TriHeight;
+    if(TriHeight<0)
+    {
+        cout<<"The height must be greater than 0"<<endl;
+        return 0;
+    }
+    else
+    {
+        cout<<"Enter the base of the triangle: "<<endl;
+        cin>>TriBase;
+        if(TriBase<0)
+        {
+            cout<<"The base must be greater than 0"<<endl;
+            return 0;
+        }
+        else
+        {
+            cout<<"The area of the triangle is "<< TriBase * .5 * TriHeight <<endl;
+        }
+    }
+}
+else if(userentry == 4)
+    {
+        cout<< "Thanks for using my program!";
+        return 0;
+    }
+else
+{
+    cout<<"wrong data";
+    return 0;
+}
+}
+
+
+
